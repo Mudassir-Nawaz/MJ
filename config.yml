@@ -2,7 +2,7 @@
 baseURL: /
 languageCode: en-us
 title: MJ
-theme: piko-theme
+theme: piko
 paginate: "9"
 copyright: © 2022 MJ. All rights reserved.
 googleAnalytics: # Enter Google Analytics ie. UA-012345678-9

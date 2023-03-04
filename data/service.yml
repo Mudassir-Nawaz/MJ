@@ -1,0 +1,47 @@
+########################### services ############################
+services:
+  # service item loop
+  - title : "Web development"
+    icon : /uploads/zap.svg
+    content : "A digital agency isn't here to replace your internal team, we're here to partner"
+    
+  # service item loop
+  - title : "Interface Design"
+    icon : /uploads/zap.svg
+    content : "A digital agency isn't here to replace your internal team, we're here to partner"
+    
+  # service item loop
+  - title : "Business Consulting"
+    icon : /uploads/zap.svg
+    content : "A digital agency isn't here to replace your internal team, we're here to partner"
+    
+  # service item loop
+  - title : "Branding"
+    icon : /uploads/zap.svg
+    content : "A digital agency isn't here to replace your internal team, we're here to partner"
+    
+  # service item loop
+  - title : "App development"
+    icon : /uploads/zap.svg
+    content : "A digital agency isn't here to replace your internal team, we're here to partner"
+    
+  # service item loop
+  - title : "Content creation"
+    icon : /uploads/zap.svg
+    content : "A digital agency isn't here to replace your internal team, we're here to partner"
+    
+  # service item loop
+  - title : "Business Consulting"
+    icon : /uploads/zap.svg
+    content : "A digital agency isn't here to replace your internal team, we're here to partner"
+    
+  # service item loop
+  - title : "Branding"
+    icon : /uploads/zap.svg
+    content : "A digital agency isn't here to replace your internal team, we're here to partner"
+    
+  # service item loop
+  - title : "App development"
+    icon : /uploads/zap.svg
+    content : "A digital agency isn't here to replace your internal team, we're here to partner"
+

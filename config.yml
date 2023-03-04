@@ -1,0 +1,202 @@
+---
+baseURL: /
+languageCode: en-us
+title: MJ
+theme: piko-theme
+paginate: "9"
+copyright: © 2022 MJ. All rights reserved.
+googleAnalytics: # Enter Google Analytics ie. UA-012345678-9
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+outputs:
+  home:
+  - HTML
+  - RSS
+  - JSON
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+  minifyOutput: true
+  tdewolff:
+    html:
+      keepWhitespace: false
+
+params:
+  # Clients Logos
+  clients_logo:
+    - logo: about/key-vision1.png
+    - logo: about/key-vision2.png
+    - logo: about/key-vision3.png
+    - logo: about/key-vision4.png
+    - logo: about/key-vision5.png
+    - logo: about/key-vision5.png
+    - logo: about/key-vision4.png
+    - logo: about/key-vision3.png
+    - logo: about/key-vision2.png
+    - logo: about/key-vision1.png
+  # Social Handles
+  twitter: https://twitter.com/
+  linkedin: https://linkedin.com/
+  mastodon: https://mastodon.social/
+  analytics:
+    google:
+      SiteVerificationTag: # Google Site Verification
+    yandex:
+      SiteVerificationTag: # Yandex Site Verification
+    bing:
+      SiteVerificationTag: # Bing Site Verification
+  env: production
+  author: Your Name
+  description: Your website description
+  math: false
+  images:
+  - "/uploads/og.webp"
+  label:
+    title: LOGO
+    text: 
+    icon: 
+    iconHeight: "35"
+    iconWIdth: "35"
+  comments: true
+  mainSections:
+  - blog
+  ShowShareButtons: true
+  ShowCodeCopyButtons: true
+  ShowRelated: true
+  CookieNotice: We use cookies to improve your experience on our site and to show
+    you relevant advertising.
+  CookieLink: /legal/privacy/#cookies-and-web-beacons
+  CookieButton: Cookies Policy
+  disableAnchoredHeadings: false
+  contactFormAction: # Get link from https://formsubmit.io or https://fabform.io
+  assets:
+    disableFingerprinting: false
+    favicon: 
+    favicon16x16: 
+    favicon32x32: 
+    apple_touch_icon: 
+    safari_pinned_tab: 
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  # Email Subscription
+  emailHeading: Subscribe Us!
+  emailDisc: Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque.
+  emailButton: Subscribe
+  homepage:
+    # Hero Section
+    disableHeroSection: false
+    heroUpperTitle: 
+    heroTitle: Homepage Title
+    heroDescription: Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    heroCTAPrimaryText: Blog
+    heroCTAPrimaryUrl: "/blog/"
+    heroCTASecondaryText: Contact Us
+    heroCTASecondaryUrl: "/contact/"
+    heroBackgroundImage: "https://picsum.photos/900/300"
+    # Blog Section
+    disableBlogSection: false
+    blogTitle: Latest Posts
+    blogDescription: This is my latest blog posts
+    seeMoreText: More Posts
+    # About Section    
+    disableAboutSection: false
+    aboutTitle: About Us
+    aboutDescription: Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    aboutImgUrl: "https://picsum.photos/500/300"
+    aboutContent: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo odio architecto commodi molestias? Et libero placeat deleniti dolores aliquid perspiciatis quasi cupiditate dolor, quam quas excepturi at facilis enim labore?
+    # Portfolio Section
+    disablePortfolioSection: false
+    portfolioTitle: Example
+    portfolioDescription: Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    portfolio:
+    - imageUrl: https://picsum.photos/300/300
+      alt: # image alt for better SEO
+      description: Lorem, ipsum dolor.
+      websiteUrl: #
+    - imageUrl: https://picsum.photos/300/300
+      alt: # image alt for better SEO
+      description: Lorem, ipsum dolor.
+      websiteUrl: #
+    - imageUrl: https://picsum.photos/300/300
+      alt: # image alt for better SEO
+      description: Lorem, ipsum dolor.
+      websiteUrl: #
+      
+  # Search Options (https://fusejs.io/)
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: "0"
+    distance: "1000"
+    threshold: "0.4"
+    minMatchCharLength: "0"
+    keys:
+    - title
+    - permalink
+    - summary
+    - content
+  plugins:
+    css:
+    - link: plugins/css/pico.min.css
+    - link: plugins/css/main.css
+    - link: plugins/css/nav.css
+    js:
+    - link: plugins/js/feather.min.js
+menus:
+  main: # Main Menu
+  - name: Home
+    title: Home
+    pre: 
+    url: "/"
+    weight: "1"
+  - name: About
+    title: About
+    pre: 
+    url: "/about/"
+    weight: "10"
+  - name: Services
+    title: Services
+    pre: 
+    url: "/services/"
+    weight: "11"
+  - name: Clients
+    title: Clients
+    pre: 
+    url: "/clients/"
+    weight: "13"
+  - name: Blog
+    title: Blog
+    pre: 
+    url: "/blog"
+    weight: "20"
+  - name: Contact
+    title: Contact
+    pre: 
+    url: "/contact"
+    weight: "40"
+  - name: 
+    title: 
+    pre: search
+    url: "/search"
+    weight: "300"
+  search: # Search page's quick links
+  - name: Categories
+    title: Categories
+    url: "/categories"
+    weight: "10"
+  - name: Archives
+    title: Archives
+    url: "/archives"
+    weight: "20"
+  - name: Tags
+    title: Tags
+    url: "/tags"
+    weight: "30"
+

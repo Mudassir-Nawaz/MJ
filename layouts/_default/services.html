@@ -1,0 +1,80 @@
+{{ define "main" }}
+{{ $data := index .Site.Data }}
+
+<style>
+    .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    @media (max-width: 576px) {
+    .row {
+        grid-template-columns: 1fr;
+    }   
+    }
+    @media (max-width: 992px) {
+    .row {
+        grid-template-columns: 1fr 1fr;
+    }   
+    }
+</style>
+
+<section class="hero" style="background-image:linear-gradient(rgba(20,30,38, 0.9), rgba(24,44,54, 0.8)),
+url('{{.Params.Image}}');">
+  <header class="container">
+    <hgroup>
+      <h1>{{ .Title }}</h1>
+      <h2>{{ .Description }}</h2>
+    </hgroup>
+  </header>
+</section>
+<div class="container">
+    <!--  Section Services Start -->
+    <section class="section service">
+        <div class="container">
+            <div class="row grid grid-post">
+                {{ range $index, $element:= $data.service.services }}
+                {{ $delay := mul $index 100 }}
+                <div class="col-lg-4 col-md-6">
+                <article class="d-flex mb-5" data-aos="fade-up" data-aos-delay="{{ $delay }}">
+                    <img src="{{ .icon }}" width="35" height="35">
+                    <div class="ml-5">
+                    <h4 class="mb-3">{{ .title | markdownify }}</h4>
+                    <p>{{ .content | markdownify }}</p>
+                    </div>
+                </article>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+  <!--  Section Services End -->
+
+
+</div>
+    
+    {{- if (.Param "ShowRelated") }} 
+    <aside>
+      <article>
+        {{ $related := .Site.RegularPages.Related . | first 5 }} {{ with
+        $related }}
+        <h3>See Also</h3>
+
+        {{ range . }}
+
+        <a href="{{ .RelPermalink }}">
+          <hgroup>
+            <h4><i>{{ .Title }}</i></h4>
+            <p>{{- partial "post_meta.html" . -}}</p>
+          </hgroup>
+        </a>
+
+        {{ end }} {{ end }} 
+      </article>
+    </aside>
+    {{ end }}
+    
+  </div>
+</div>
+{{ end }}

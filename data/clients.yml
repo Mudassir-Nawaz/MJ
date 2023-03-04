@@ -1,0 +1,4 @@
+######################### clients logo ##################################
+clients_logo:
+  enable : true
+  # clients logo comes from "config.toml" file.

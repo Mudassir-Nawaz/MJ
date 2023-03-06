@@ -1,6 +1,6 @@
-<div class="sidebar-wrap mt-5 mt-lg-0">
+<div class="sidebar-wrap mt-5 mt-lg-0" style="margin-bottom: 20px; border: 2px solid black; text-align: center; border-radius: 4px;">
 
-  <div class="sidebar-widget latest-post mb-4">
+  <!-- <div class="sidebar-widget latest-post mb-4">
     <h5 class="text-center mb-4">{{ i18n "latest_post" }}</h5>
     {{ range first 3 ( where .Site.RegularPages "Type" "post" )}}
     <div class="media border-bottom py-3">
@@ -12,28 +12,28 @@
       </div>
     </div>
     {{ end }}
-  </div>
+  </div> -->
 
-  <div class="sidebar-widget category mb-4" style="margin-bottom: 20px;">
-    <h5 class="mb-4">Categories</h5>
+  <div class="sidebar-widget category " >
+    <h5 class="" style="padding: 0 20px; margin-bottom: 10px; margin-top: 10px;">Categories</h5>
     {{- if isset .Site.Taxonomies "categories" }}
     {{- if not (eq (len .Site.Taxonomies.categories) 0) }}
 
       {{- range $name, $items := .Site.Taxonomies.categories }}
         <a class="align-items-center d-flex justify-content-between"
-          href="{{ `categories/` | relLangURL }}{{ $name | urlize | lower }}">{{ $name | title | humanize }}</a>
+          href="{{ `categories/` | relLangURL }}{{ $name | urlize | lower }}" style="display: block; border-top: 2px solid black; border-bottom: 2px solid black; ">{{ $name | title | humanize }}</a>
       {{- end }}
 
     {{- end }}
     {{- end }}
   </div>
 
-  <div class="sidebar-widget tags mb-3">
-    <h5 class="mb-4">Tags</h5>
+  <div class="sidebar-widget tags" style="margin-top: 10px; ">
+    <h5 class="" style="padding: 0 20px; margin-top: 10px; margin-bottom: 10px;">Tags</h5>
     {{- if isset .Site.Taxonomies "tags" }}
     {{- if not (eq (len .Site.Taxonomies.tags) 0) }}
     {{- range $name, $items := .Site.Taxonomies.tags }}
-    <a href="{{ `tags/` | relLangURL }}{{ $name | urlize | lower }}" style="display: block;">{{ $name | humanize }}</a>
+    <a href="{{ `tags/` | relLangURL }}{{ $name | urlize | lower }}" style="display: block; border-top: 2px solid black; border-bottom: 2px solid black; ">{{ $name | humanize }}</a>
     {{- end }}
     {{- end }}
     {{- end }}

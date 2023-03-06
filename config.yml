@@ -55,13 +55,9 @@ params:
   env: production
   author: Your Name
   description: Your website description
-  math: false
-  images:
-  - "/uploads/og.webp"
-  label:
-    title: LOGO
-    text: 
-    icon: 
+  math: false 
+  label: 
+    icon: https://picsum.photos/35/35
     iconHeight: "35"
     iconWIdth: "35"
   comments: true
@@ -101,7 +97,7 @@ params:
     heroCTASecondaryUrl: "/contact/"
     heroBackgroundImage: "https://picsum.photos/900/300"
     # Blog Section
-    disableBlogSection: false
+    disableBlogSection: true
     blogTitle: Latest Posts
     blogDescription: This is my latest blog posts
     seeMoreText: More Posts
@@ -149,6 +145,7 @@ params:
     - link: plugins/css/nav.css
     js:
     - link: plugins/js/feather.min.js
+    - link: https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js
 menus:
   main: # Main Menu
   - name: Home
